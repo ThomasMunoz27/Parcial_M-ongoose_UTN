@@ -64,8 +64,8 @@ exports.addBookToAuthor = async (req, res) => {
             return res.status(404).json({message: "No se encontró un recurso"})
         }
 
-        if(!author.books.includes(book._id)){
-            author.books.push(book._id)
+        if(!author.libros.includes(book._id)){
+            author.libros.push(book._id)
             await author.save()
         }
 
